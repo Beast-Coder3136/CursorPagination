@@ -14,7 +14,7 @@ app.use(cors({
 }))
 
 
-app.use("/api/product", productRouter)
+app.use("/", productRouter)
 
 const port = process.env.PORT || 8000;
 
