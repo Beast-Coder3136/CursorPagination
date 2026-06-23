@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/product")
+        const res = await fetch(" https://cursorpagination.onrender.com")
         const data = await res.json()
         console.log(data);
         setProducts(data.products)
@@ -44,7 +44,7 @@ function App() {
 
   const handleCategroy = async()=>{
     try {
-      const res = await fetch(`http://localhost:5000/api/product?category=${category}`)
+      const res = await fetch(` https://cursorpagination.onrender.com?category=${category}`)
       const data = await res.json() 
       setProducts(data.products)
     } catch (error) {
@@ -54,7 +54,7 @@ function App() {
 
   const handleLoadMore = async()=>{
     try {
-      const res = await fetch(`http://localhost:5000/api/product?category=${category}&nextCursor=${nextCursor}`)
+      const res = await fetch(` https://cursorpagination.onrender.com?category=${category}&nextCursor=${nextCursor}`)
       const data = await res.json()
       console.log(data)
       let newProducts = [...products, ...data.products] ;
